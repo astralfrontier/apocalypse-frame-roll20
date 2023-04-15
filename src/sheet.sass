@@ -1,5 +1,9 @@
 // Everything lives under a top level #af-sheet element to improve specificity
 
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Audiowide&display=swap')
+
+$family-sans-serif: "Abel", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+
 #af-sheet
   @import "../node_modules/bulma/bulma.sass"
 
@@ -12,8 +16,13 @@
   input[type="number"]
     width: 4rem
 
+  // Assuming this is a pro font or something
+  // .main-header-font
+  //   font-family: "Unknown"
+
   .section-title
     border: solid black
     padding: 1rem
+    font-family: "Audiowide", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
 
 // @import "./rolltemplates"
