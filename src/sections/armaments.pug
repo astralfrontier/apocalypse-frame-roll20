@@ -5,14 +5,14 @@
     .columns
       .column
         +textfield(`attr_${attr}_name`, "Name")
-    .columns
-      .column
+    .columns.is-variable.is-1
+      .column.is-narrow
         +numberfield(`attr_${attr}_dice`, "Dice")
           button(type="roll" value=`&{template:af} {{name=${label}: @{${attr}_name}}} {{roll=[[@{${attr + '_dice'}}d6kh1]]}} {{tags=@{${attr}_tags}}}`)
-      .column
+      .column.is-narrow
         +numberfield(`attr_${attr}_harm`, "Harm")
       .column
-        +numberfield(`attr_${attr}_range`, "Range")
+        +textfield(`attr_${attr}_range`, "Range")(list="ranges")
     .columns
       .column
         +textfield(`attr_${attr}_tags`, "Tags")(list="tags")

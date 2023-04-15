@@ -9,25 +9,25 @@ mixin section(title)
 mixin textfield(attr, label, help)
   .field.is-horizontal
     if label
-      .field-label.is-normal
-        label.label= label
+      .field-label.is-large
+        label.label.is-large= label
     .field-body
       .field
         .control
-          input.input(type="text" name=attr)&attributes(attributes)
+          input.input.is-large(type="text" name=attr)&attributes(attributes)
         if help
           p.help= help
 
 mixin numberfield(attr, label, help)
   .field.is-horizontal
     if label
-      .field-label.is-normal
-        label.label= label
+      .field-label.is-large
+        label.label.is-large= label
     .field-body
       if block
         .field.has-addons
           .control
-            input.input(type="number" name=attr)&attributes(attributes)
+            input.input.is-large(type="number" name=attr)&attributes(attributes)
           .control
             block
           if help
@@ -35,19 +35,19 @@ mixin numberfield(attr, label, help)
       else
         .field
           .control
-            input.input(type="number" name=attr)&attributes(attributes)
+            input.input.is-large(type="number" name=attr)&attributes(attributes)
           if help
             p.help= help
 
 mixin textarea(attr, label)
   field.is-horizontal
     if label
-      .field-label.is-normal
-        label.label= label
+      .field-label.is-large
+        label.label.is-large= label
     .field-body
       .field
         .control
-          textarea.textarea(name=attr)&attributes(attributes)
+          textarea.textarea.is-large(name=attr)&attributes(attributes)
 
 mixin track(attr, label, attr_bonus, label_bonus)
   //- e.g. attr_vigor, attr_tension - used for showing on tokens
