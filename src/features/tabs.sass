@@ -1,0 +1,11 @@
+// Use some ridiculously high number of pages.
+// Anything that's not actually used will get ignored
+@for $page from 1 through 99
+  // Hide tabs that aren't active
+  .tabs-trigger:not([value="tab#{$page}"]) ~ .sheet-tab#{$page}
+    display: none
+
+  // Uncomment and season to taste if you want to highlight the currently active tab
+
+  // .tabs-trigger[value="tab#{$page}"] ~ .tabs-buttons button[data-tab="tatb#{$page}"]
+  //   color: goldenrod

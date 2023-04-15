@@ -1,4 +1,12 @@
-// Import our new framework
-@import "./noctis/noctis"
-@import "./rolltemplates"
-@import "./tabstoggle"
+// Everything lives under a top level #af-sheet element to improve specificity
+
+#af-sheet
+  @import "../node_modules/bulma/bulma.sass"
+
+  // Include local features
+  @import "./features/emoji"
+  @import "./features/roll20-reset"
+  @import "./features/tabs"
+  @import "./features/tooltip"
+
+// @import "./rolltemplates"
