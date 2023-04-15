@@ -15,8 +15,16 @@ $family-sans-serif: "Abel", BlinkMacSystemFont, -apple-system, "Segoe UI", "Robo
 
   @import "./taglist"
 
+  // Remove spinners from text fields
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
   input[type="number"]
     width: 4rem
+    text-align: center
+    -moz-appearance: textfield
 
   // Assuming this is a pro font or something
   // .main-header-font
