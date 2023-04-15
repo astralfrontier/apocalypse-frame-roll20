@@ -1,0 +1,8 @@
++section("Systems")
+  p Spend 1 Fuel on your turn to use these
+  each label, attr in {"system_signature": "Signature System", "system_modular_1": "Modular System 1", "system_modular_2": "Modular System 2"}
+    p
+      strong= `${label}:`
+    +textfield(`attr_${attr}_name`, "Name")
+    +textarea(`attr_${attr}_effect`, "Effect")
+    +textfield(`attr_${attr}_tags`, "Tags")

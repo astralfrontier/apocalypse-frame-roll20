@@ -1,60 +1,22 @@
-.row
-  .col
-    +section("Apocalypse Frame")
-      .row
-        .col-xs-6
-          +textfield("attr_character_name", "Callsign")
-          +textfield("attr_frame_model", "Frame Model")
-          +textfield("attr_frame_name", "Frame Name")
-          +textarea("attr_description", "Description")
-        .col-xs-6
-          +textfield("attr_pronouns", "Name/Pronouns")
-          +textarea("attr_description_right", "Description")
-          +textarea("attr_background", "Background")
-.row
-  .col-xs-6
-    +section("Attributes")
-      +textfield("attr_drive", "Drive")
-      p Forceful, direct, sweeping, powerful
-      p <strong>Drive</strong> contributes to <strong>Maximum Vigor</strong>
-      +textfield("attr_speed", "Speed")
-      p Quick, reactive, reflexive, immediate
-      p <strong>Speed</strong> contributes to <strong>Maximum Tension</strong>
-      +textfield("attr_control", "Control")
-      p Expert, skillful, technical, deliberate
-      p <strong>Control</strong> contributes to <strong>Maximum Fuel</strong>
-  .col-xs-6
+include sections/profile
+.columns
+  .column.is-one-half
+    include sections/attributes
+  .column.is-one-half
     +section("Build")
       +textarea("attr_build")
     +section("Signature Feature")
       +textarea("attr_signature_feature")
-.row
-  .col-xs-6
-    +section("Systems")
-      p Spend 1 Fuel on your turn to use these
-      each label, attr in {"system_signature": "Signature System", "system_modular_1": "Modular System 1", "system_modular_2": "Modular System 2"}
-        p
-          strong= `${label}:`
-        +textfield(`attr_${attr}_name`, "Name")
-        +textarea(`attr_${attr}_effect`, "Effect")
-        +textfield(`attr_${attr}_tags`, "Tags")
-  .col-xs-6
-    +section("Armaments")
-      p Use the Attack Action on your turn to use these
-      each label, attr in {"arm1": "Armament 1", "arm2": "Armament 2", "arm_1b": "Backup Armament 1", "arm_2b": "Backup Armament 2"}
-        p
-          strong= `${label}:`
-        +textfield(`attr_${attr}_name`, "Name")
-        +textfield(`attr_${attr}_name`, "Dice")
-        +textfield(`attr_${attr}_name`, "Harm")
-        +textfield(`attr_${attr}_name`, "Range")
-        +textfield(`attr_${attr}_tags`, "Tags")
-+section()
-  .row
-    .col-xs-4 
-      +track("attr_vigor", "Vigor", "attr_drive")
-    .col-xs-4 
-      +track("attr_tension", "Tension", "attr_speed")
-    .col-xs-4 
-      +track("attr_fuel", "Fuel", "attr_control")
+.columns
+  .column.is-one-half
+    include sections/systems
+  .column.is-one-half
+    include sections/armaments
+.columns
+  .column.is-one-third
+    +track("attr_vigor", "Vigor", "attr_drive")
+  .column.is-one-third
+    +track("attr_tension", "Tension", "attr_speed")
+  .column.is-one-third
+    +track("attr_fuel", "Fuel", "attr_control")
     

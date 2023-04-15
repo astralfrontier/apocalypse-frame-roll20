@@ -1,0 +1,10 @@
++section("Armaments")
+  p Use the Attack Action on your turn to use these
+  each label, attr in {"arm1": "Armament 1", "arm2": "Armament 2", "arm_1b": "Backup Armament 1", "arm_2b": "Backup Armament 2"}
+    p
+      strong= `${label}:`
+    +textfield(`attr_${attr}_name`, "Name")
+    +textfield(`attr_${attr}_name`, "Dice")
+    +textfield(`attr_${attr}_name`, "Harm")
+    +textfield(`attr_${attr}_name`, "Range")
+    +textfield(`attr_${attr}_tags`, "Tags")

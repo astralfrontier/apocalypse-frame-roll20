@@ -1,33 +1,52 @@
 //- Show a section of the character sheet, wrapped in a frame, with a given title
 mixin section(title)
-  section.noctis-section
+  section.block
     if title
-      h3.noctis-section-title= title
+      h1.title.section-title&attributes(attributes)= title
     if block
-      .noctis-section-body
-        block
+      block
 
-mixin textfield(attr, label)
-  .row
-    .col-xs-3= label
-    .col-xs-9
-      input(type="text" name=attr)&attributes(attributes)
+mixin textfield(attr, label, help)
+  .field.is-horizontal
+    if label
+      .field-label.is-normal
+        label.label= label
+    .field-body
+      .field
+        .control
+          input.input(type="text" name=attr)&attributes(attributes)
+        if help
+          p.help= help
+
+mixin numberfield(attr, label, help)
+  .field.is-horizontal
+    if label
+      .field-label.is-normal
+        label.label= label
+    .field-body
+      .field
+        .control
+          input.input(type="number" name=attr)&attributes(attributes)
+        if help
+          p.help= help
 
 mixin textarea(attr, label)
-  if label
-    .row
-      .col= label
-  .row
-    .col
-      textarea(name=attr placeholder=label rows="4")
+  field.is-horizontal
+    if label
+      .field-label.is-normal
+        label.label= label
+    .field-body
+      .field
+        .control
+          textarea.textarea(name=attr)&attributes(attributes)
 
 mixin track(attr, label, bonus)
-  p
-    strong= label
-  .row
-    each col in [1, 2, 3, 4, 5, 6]
-      .col-xs-2
+  .columns
+    .column.is-one-third
+      strong= label
+      //- TODO: print the bonus attribute stuff here
+    .column.is-two-thirds
+      each col in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         input(type="checkbox" name=`${attr}_${col}`)
-    each col in [7, 8, 9, 10, 11, 12]
-      .col-xs-2
-        input(type="checkbox" name=`${attr}_${col}`)
+        if col == 6
+          br

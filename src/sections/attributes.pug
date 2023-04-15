@@ -1,0 +1,36 @@
+-
+  var attributes = [
+    {
+      attr: "drive",
+      label: "Drive",
+      adjectives: "Forceful, direct, sweeping, powerful",
+      contributes: "Vigor"
+    },
+    {
+      attr: "speed",
+      label: "Speed",
+      adjectives: "Quick, reactive, reflexive, immediate",
+      contributes: "Tension"
+    },
+    {
+      attr: "control",
+      label: "Control",
+      adjectives: "Expert, skillful, technical, deliberate",
+      contributes: "Fuel"
+    }
+  ]
+
++section("Attributes")
+  each entry in attributes
+    .columns
+      .column.is-one-third
+        +numberfield(`attr_${entry.attr}`, entry.label)(min="1" max="3")
+      .column.is-two-thirds
+        span= entry.adjectives
+    .columns
+      .column
+        strong= entry.label
+        span= ` contributes to ` 
+        strong= `Maximum ${entry.contributes}`
+  p
+    strong Put 3 in one Attribute, 2 in another, and 1 in the third.

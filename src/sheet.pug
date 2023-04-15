@@ -5,11 +5,12 @@ include standard-elements
 
 #roll20reset
   #af-sheet
-    +tabs("tabs", ["Character", "Reference"])
-      .sheet-tab1
-        include sheet-tab1
-      .sheet-tab2
-        include sheet-tab2
+    .container
+      +tabs("tabs", ["Character", "Reference"])
+        .sheet-tab1
+          include sheet-tab1
+        .sheet-tab2
+          include sheet-tab2
 
 //- Pull in datalists for auto completing text fields
 include datalists
