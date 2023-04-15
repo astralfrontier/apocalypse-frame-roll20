@@ -1,3 +1,3 @@
-**MEGALOS Sheet**
+**Apocalypse Frame Sheet**
 
-Sheet Help is available online: https://github.com/astralfrontier/megalos-roll20/wiki/Player%27s-Guide
+Sheet Help is available online: https://github.com/astralfrontier/apocalypse-frame-roll20/wiki/Home

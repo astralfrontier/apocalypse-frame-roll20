@@ -2,11 +2,11 @@
 
 @for $page from 1 through 5
   // Hide tabs that aren't active
-  #megalos-sheet .sheet-tabstoggle:not([value="page#{$page}"]) ~ .sheet.sheet-page#{$page}
+  #apocalypse-frame-sheet .sheet-tabstoggle:not([value="page#{$page}"]) ~ .sheet.sheet-page#{$page}
     display: none
 
   // Highlight the button for the active tab
-  #megalos-sheet .sheet-tabstoggle[value="page#{$page}"] ~ .sheet-tabs-listing button[data-tab="page#{$page}"]
+  #apocalypse-frame-sheet .sheet-tabstoggle[value="page#{$page}"] ~ .sheet-tabs-listing button[data-tab="page#{$page}"]
     color: goldenrod
 
 // Styling for the buttons

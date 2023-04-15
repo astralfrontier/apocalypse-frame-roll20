@@ -1,34 +1,29 @@
-include containers
+include standard-elements
 
 .roll20-reset
   #noctis
-    #megalos-sheet
+    #apocalypse-frame-sheet
       include tabstoggle
 
       //- Include individual sheets in their entirety
+
+      //- Sheet
       .sheet.sheet-page1
         include sheet-page1
+
+      //- Reference
       .sheet.sheet-page2
         include sheet-page2
-      .sheet.sheet-page3
-        include sheet-page3
-      .sheet.sheet-page4
-        include sheet-page4
-      .sheet.sheet-page5
-        include sheet-page5
 
 //- Pull in datalists for auto completing text fields
 include datalists
 
 script(type="text/worker")
   include:typescript sheetworkers.ts
-  include:typescript conditions-statuses.ts
   include:typescript tabstoggle.ts
-  include:typescript aethercurrents.ts
-  include:typescript jsonimport.ts
 
 //- Roll templates
 include rolltemplates
 
 //- Include some CSS classes that will be injected by Roll20, so that PurgeCSS doesn't cleanse them
-.btn.pictos.repcontrol_add.repcontrol_edit.repcontrol_move.repcontrol_del.aether-current-charges
+.btn.pictos.repcontrol_add.repcontrol_edit.repcontrol_move.repcontrol_del

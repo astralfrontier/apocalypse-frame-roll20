@@ -35,6 +35,6 @@ jobs:
           body_path: CHANGELOG.md
           files: |
             dist/sheet.json
-            dist/megalos.html
-            dist/megalos.css
+            dist/apocalypse-frame.html
+            dist/apocalypse-frame.css
             dist/preview.png

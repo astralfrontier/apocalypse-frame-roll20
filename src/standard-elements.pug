@@ -1,0 +1,33 @@
+//- Show a section of the character sheet, wrapped in a frame, with a given title
+mixin section(title)
+  section.noctis-section
+    if title
+      h3.noctis-section-title= title
+    if block
+      .noctis-section-body
+        block
+
+mixin textfield(attr, label)
+  .row
+    .col-xs-3= label
+    .col-xs-9
+      input(type="text" name=attr)&attributes(attributes)
+
+mixin textarea(attr, label)
+  if label
+    .row
+      .col= label
+  .row
+    .col
+      textarea(name=attr placeholder=label rows="4")
+
+mixin track(attr, label, bonus)
+  p
+    strong= label
+  .row
+    each col in [1, 2, 3, 4, 5, 6]
+      .col-xs-2
+        input(type="checkbox" name=`${attr}_${col}`)
+    each col in [7, 8, 9, 10, 11, 12]
+      .col-xs-2
+        input(type="checkbox" name=`${attr}_${col}`)

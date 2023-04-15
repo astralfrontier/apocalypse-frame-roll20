@@ -1,5 +1,5 @@
 {
-  "name": "megalos",
+  "name": "apocalypse-frame",
   "author": "Bill Garrett <garrett@astralfrontier.org>",
   "version": "0.22.1",
   "description": "118980",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/astralfrontier/megalos-roll20.git"
+    "url": "git+https://github.com/astralfrontier/apocalypse-frame-roll20.git"
   },
   "keywords": [],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/astralfrontier/megalos-roll20/issues"
+    "url": "https://github.com/astralfrontier/apocalypse-frame-roll20/issues"
   },
-  "homepage": "https://github.com/astralfrontier/megalos-roll20#readme",
+  "homepage": "https://github.com/astralfrontier/apocalypse-frame-roll20#readme",
   "dependencies": {
     "@drewbot/sass-flexbox-grid": "^2.0.7",
     "fs-extra": "^11.1.1",
