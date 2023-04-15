@@ -40,13 +40,14 @@ mixin textarea(attr, label)
         .control
           textarea.textarea(name=attr)&attributes(attributes)
 
-mixin track(attr, label, bonus)
+mixin track(attr, label, attr_bonus, label_bonus)
   .columns
-    .column.is-one-third
+    .column
       strong= label
-      //- TODO: print the bonus attribute stuff here
-    .column.is-two-thirds
+      br
+      +numberfield(`${attr}_base`, `${label_bonus} +`)
+    .column
       each col in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-        input(type="checkbox" name=`${attr}_${col}`)
+        input(type="checkbox" name=`${attr}_box_${col}`)
         if col == 6
           br
