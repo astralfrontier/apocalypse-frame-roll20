@@ -1,0 +1,9 @@
+//- Update equipmentTags in variables.json to add new tags
+//- They will automatically show up in the list
+
+mixin taglist(attr)
+  input.taglist-trigger(type="hidden" name=attr)
+  each text, tag in equipmentTags
+    p(class=`tag-help-${tag}`)
+      strong= tag
+      span= `: ${text}`

@@ -1,0 +1,7 @@
+@each $tag in equipment-tags()
+  // Because it keeps de-indenting the real rule below
+  .fuck-you-vscode
+    display: none
+
+  input.taglist-trigger:not([value~=#{$tag}]) ~ .tag-help-#{$tag}
+    display: none

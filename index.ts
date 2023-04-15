@@ -5,6 +5,7 @@ import { PurgeCSS } from 'purgecss'
 import sass from 'sass'
 
 import * as packageJson from './package.json'
+const sassFunctions = require('./src/sass-functions.js')
 
 const INPUT_DIR = path.join(__dirname, 'src')
 const OUTPUT_DIR = path.join(__dirname, 'dist')
@@ -28,6 +29,7 @@ const html = pug.compileFile(path.join(INPUT_DIR, 'sheet.pug'), {
 
 const css = sass.compile(path.join(INPUT_DIR, 'sheet.sass'), {
   style: 'compressed',
+  functions: sassFunctions,
 }).css
 
 new PurgeCSS()
