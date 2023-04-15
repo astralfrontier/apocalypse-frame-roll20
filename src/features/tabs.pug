@@ -8,7 +8,7 @@
 
 mixin tabs(attr, tabnames)
   .tabs-section
-    input.tabs-trigger(type="hidden" name=attr value="tab1")
+    input.tabs-trigger(type="hidden" name=`attr_${attr}` value="tab1")
     .tabs-buttons
       - var tabnumber = 0
       while tabnumber < tabnames.length
