@@ -56,6 +56,10 @@ mixin track(attr, label, attr_bonus, label_bonus)
   .columns
     .column
       strong= label
+      span= " "
+      span(name=attr)
+      span= "/"
+      span(name=`${attr}_max`)
       br
       +numberfield(`${attr}_base`, `${label_bonus} +`)
     .column
