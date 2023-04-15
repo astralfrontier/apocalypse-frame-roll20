@@ -1,2 +1,97 @@
 +section("Reference Sheet")
-  p     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  .content
+    .columns
+      .column.is-half
+        h2 Rolling
+        p
+          | In every case except for Attacks, pick the attribute that best describes your approach,
+          | roll a number of dice equal to that Attribute, and use the highest.
+          | For Attacks, roll the number of dice listed next to the armament.
+        h2 Resources
+        p
+          strong Vigor
+          |
+          | lets your frame resist Frame Damage. It's reduced by Harm.
+        p
+          strong Tension
+          |
+          | is spent to let you reroll Attacks or take extra actions.
+        p 
+          strong Fuel
+          |
+          | is spent to let you use Systems during a turn.
+          | It can't be restored until the end of a mission.
+        h2 On Your Turn 
+        p
+          | You have two Actions per turn, and may use either of them to do any of the following:
+        ul 
+          li
+            strong Move
+            |
+            | to a Near location (no roll required).
+          li 
+            strong Sprint
+            |
+            | to a Far location if there are no enemies in Close, Near, or Far range (no roll required).
+          li 
+            strong Attack
+            |
+            | using an Armament (requires rolling the number of dice on the Armament)
+          li 
+            strong Interact
+            |
+            | with something in the environment (requires an Attribute roll if necessary, depending on the interaction).
+        p 
+          | You may spend as many Tension on your turn as you'd like to gain extra actions 
+          | equal to Tension spent. You may also spend as many Fuel on your turn 
+          | as you'd like to activate Systems. (Systems don't require a roll/action).
+      .column.is-half
+        p 
+          strong When the highest die is...
+        ul(style="list-style-type: none;")
+          li
+            strong 1-2:
+            |
+            | Failure with a consequence (No, and...)
+          li
+            strong 3-4:
+            |
+            | Success with a consequence (Yes, but...)
+          li
+            strong 5-6:
+            |
+            | Success (Yes)
+        h2 Frame Damage 
+        p 
+          strong 1st or 2nd time per mission: 
+          |
+          | Roll or choose below, +1 max Tension, restore all Vigor/Tension, gain 1 Fuel.
+        p 
+          strong 3rd time: 
+          |
+          | Eject or Last Stand 
+        ol 
+          li
+            strong Superstructure:
+            |
+            | -2 Max Vigor. -1 die, Drive rolls
+          li
+            strong Legs:
+            |
+            | Move/Sprint need Speed rolls. -1 die, all other Speed rolls.
+          li
+            strong Sensor:
+            |
+            | -1 die, Attack/Control rolls.
+          li
+            strong Arm:
+            |
+            | Lose one Armament.
+          li
+            strong Shoulder:
+            |
+            | One Mod. System needs a Control roll.
+          li
+            strong Core:
+            |
+            | Sig. System needs a Drive roll.
