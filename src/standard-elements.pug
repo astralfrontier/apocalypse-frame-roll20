@@ -50,6 +50,9 @@ mixin textarea(attr, label)
           textarea.textarea(name=attr)&attributes(attributes)
 
 mixin track(attr, label, attr_bonus, label_bonus)
+  //- e.g. attr_vigor, attr_tension - used for showing on tokens
+  input(type="hidden" name=attr value="0")
+  input(type="hidden" name=`${attr}_max` value="0")
   .columns
     .column
       strong= label
