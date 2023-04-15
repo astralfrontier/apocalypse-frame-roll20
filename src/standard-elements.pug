@@ -24,11 +24,20 @@ mixin numberfield(attr, label, help)
       .field-label.is-normal
         label.label= label
     .field-body
-      .field
-        .control
-          input.input(type="number" name=attr)&attributes(attributes)
-        if help
-          p.help= help
+      if block
+        .field.has-addons
+          .control
+            input.input(type="number" name=attr)&attributes(attributes)
+          .control
+            block
+          if help
+            p.help= help
+      else
+        .field
+          .control
+            input.input(type="number" name=attr)&attributes(attributes)
+          if help
+            p.help= help
 
 mixin textarea(attr, label)
   field.is-horizontal

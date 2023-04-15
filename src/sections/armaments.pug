@@ -8,6 +8,7 @@
     .columns
       .column
         +numberfield(`attr_${attr}_dice`, "Dice")
+          button(type="roll" value=`/roll @{${attr + '_dice'}}d6kh1`)
       .column
         +numberfield(`attr_${attr}_harm`, "Harm")
       .column
