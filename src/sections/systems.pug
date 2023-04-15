@@ -4,7 +4,7 @@
     h3.title= `${label}:`
     .columns
       .column
-        +textfield(`attr_${attr}_name`, "Name")
+        +textfield(`attr_${attr}_name`, "Name")(list="system_names")
     .columns
       .column
         +textarea(`attr_${attr}_effect`, "Effect")

@@ -62,3 +62,5 @@ declare function getSectionIDs(
 declare function generateRowID(): string
 
 declare function removeRepeatingRow(row: string): void
+
+declare var variables: any

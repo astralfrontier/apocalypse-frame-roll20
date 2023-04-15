@@ -1,4 +1,49 @@
 {
+  "frames": [
+    {
+      "frame_model": "M1-SOLDIER",
+      "build": "Medium: Before rolling Drops, regain 1 Vigor and 1 Tension",
+      "signature_feature": "Your Armaments have +1 Harm if they have the Burst, Spin Up, or Splash Tags, provided they don't have the Energy Tag.",
+      "system_signature_name": "Actuated Plating (Support)",
+      "system_signature_effect": "You have +1 Armor for the rest of the round.",
+      "system_signature_tags": "Limited",
+      "vigor_base": "7",
+      "tension_base": "2",
+      "fuel_base": "4"
+    },
+    {
+      "frame_model": "L1-RECON",
+      "build": "Light: Before rolling Drops, regain 2 Tension.",
+      "signature_feature": "The first time you roll a 4 in a turn, ignore any Harm from the Consequence that arises.",
+      "system_signature_name": "Chaff Launcher (Support)",
+      "system_signature_effect": "You and all allies Close to you take -1 Harm from Near and Far attackers (minimum 0) until the end of the round.",
+      "system_signature_tags": "Limited",
+      "vigor_base": "6",
+      "tension_base": "4",
+      "fuel_base": "3"
+    }
+  ],
+  "systems": [
+    {
+      "slot_name": "Chaingun (Offensive)",
+      "slot_effect": "Choose: deal 1 Harm to four Close or Near enemies who are Close or Near to each other, or deal 2 Harm to two Close or Near enemies who are Close or Near to each other.",
+      "slot_tags": ""
+    },
+    {
+      "slot_name": "Pulse Laser (Offensive)",
+      "slot_effect": "Choose: deal 2 Harm to a Near enemy, or deal 1 Harm to a Far enemy.",
+      "slot_tags": "Energy Efficient"
+    }
+  ],
+  "armaments": [
+    {
+      "slot_name": "Assault Rifle",
+      "slot_dice": "4",
+      "slot_harm": "3",
+      "slot_range": "Near",
+      "slot_tags": "Burst"
+    }
+  ],
   "equipmentTags": {
     "Efficient": "The first time in a round that you use this System, roll a die. On a 4-6, no Fuel is expended this time.",
     "Holdout": "If you have 0 Fuel, you may use this System by spending 1 Tension. It gains the Limited Tag when used in this way.",

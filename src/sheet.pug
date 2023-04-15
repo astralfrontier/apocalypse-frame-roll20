@@ -21,7 +21,11 @@ include taglist
 include datalists
 
 script(type="text/worker")
+  //- This is the fuckiest of hacks, jesus
+  | const variables =
+  include variables.json
   include:typescript features/tabs.ts
+  include:typescript autofill.ts
   include:typescript trackers.ts
 
 //- Roll templates
