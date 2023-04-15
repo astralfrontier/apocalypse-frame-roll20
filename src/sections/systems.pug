@@ -4,7 +4,11 @@
     h3.title= `${label}:`
     .columns
       .column
-        +textfield(`attr_${attr}_name`, "Name")(list="system_names")
+        //- Don't autocomplete for signature systems, those come with the frame
+        if attr == "system_signature"
+          +textfield(`attr_${attr}_name`, "Name")
+        else
+          +textfield(`attr_${attr}_name`, "Name")(list="system_names")
     .columns
       .column
         +textarea(`attr_${attr}_effect`, "Effect")
