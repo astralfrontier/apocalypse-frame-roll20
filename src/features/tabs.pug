@@ -12,7 +12,7 @@ mixin tabs(attr, tabnames)
     .tabs-buttons
       - var tabnumber = 0
       while tabnumber < tabnames.length
-        button(type="action" name=`act_changetab` data-tab-attr=attr data-tab=`tab${tabnumber + 1}`)= tabnames[tabnumber]
+        button.button.is-large.is-primary.m-2(type="action" name=`act_changetab` data-tab-attr=attr data-tab=`tab${tabnumber + 1}`)= tabnames[tabnumber]
         - tabnumber++
     if block
       block
