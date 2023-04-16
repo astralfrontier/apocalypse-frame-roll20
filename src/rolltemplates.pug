@@ -27,3 +27,45 @@ rolltemplate.sheet-rolltemplate-af
       strong= "{{key}}"
       span= ": {{value}}"
     != "{{/allprops() name roll}}"
+
+-
+  var frameDamageResults = [
+    {
+      name: "Superstructure",
+      text: "-2 Max Vigor. -1 die, Drive rolls."
+    },
+    {
+      name: "Legs",
+      text: "Move/Sprint need Speed rolls. -1 die, all other Speed rolls."
+    },
+    {
+      name: "Sensor",
+      text: "-1 die, Attack/Control rolls."
+    },
+    {
+      name: "Arm",
+      text: "Lose one Armament."
+    },
+    {
+      name: "Shoulder",
+      text: "One Mod. System needs a Control roll."
+    },
+    {
+      name: "Core",
+      text: "Sig. System needs a Drive roll."
+    }
+  ]
+
+rolltemplate.sheet-rolltemplate-framedamage
+  .sheet-rolltemplate-header
+    h3 Frame Damage
+  .sheet-rolltemplate-body
+    - var i = 0
+    while i < frameDamageResults.length
+      != `{{#rollTotal() roll ${i+1}}}`
+      p
+        strong= `${frameDamageResults[i].name} ({{roll}}):`
+        |
+        span= frameDamageResults[i].text
+      != `{{/rollTotal() roll ${i+1}}}`
+      - i++
