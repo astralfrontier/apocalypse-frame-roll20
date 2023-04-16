@@ -16,6 +16,10 @@ $body-font-size: 1.2em
 
   @import "./taglist"
 
+  // Remove Roll20 dice
+  button[type="roll"]::before
+    content: inherit
+
   // Remove spinners from text fields
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button

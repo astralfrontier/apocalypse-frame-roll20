@@ -7,12 +7,18 @@
         +textfield(`attr_${attr}_name`, "Name")(list="armament_names")
     .columns.is-variable.is-1
       .column.is-narrow
-        +numberfield(`attr_${attr}_dice`, "Dice")
-          button(type="roll" value=`&{template:af} {{name=${label}: @{${attr}_name}}} {{roll=[[@{${attr + '_dice'}}d6kh1]]}} {{tags=@{${attr}_tags}}}`)
+        +numberfield_v(`attr_${attr}_dice`, "Dice")
+          +rollbutton("af", {
+              "name": `${label}: @{${attr}_name}`,
+              "roll": `[[@{${attr}_dice}d6kh1]]`,
+              "harm": `@{${attr}_harm}`,
+              "tags": `@{${attr}_tags}`
+            }
+          )
       .column.is-narrow
-        +numberfield(`attr_${attr}_harm`, "Harm")
+        +numberfield_v(`attr_${attr}_harm`, "Harm")
       .column
-        +textfield(`attr_${attr}_range`, "Range")(list="ranges")
+        +textfield_v(`attr_${attr}_range`, "Range")(list="ranges")
     .columns
       .column
         +textfield(`attr_${attr}_tags`, "Tags")(list="tags")

@@ -4,17 +4,23 @@ rolltemplate.sheet-rolltemplate-af
   .sheet-rolltemplate-header
     h3= "{{name}}"
   .sheet-rolltemplate-body
+    != "{{#rollBetween() roll 1 2}}"
     p
       strong Roll
-      span= ": {{roll}}"
-    != "{{#rollBetween() roll 1 2}}"
-    p Failure with a consequence (No, and...)
+      | : {{roll}} -
+      | Failure with a consequence
     != "{{/rollBetween() roll 1 2}}"
     != "{{#rollBetween() roll 3 4}}"
-    p Success with a consequence (Yes, but...)
+    p
+      strong Roll
+      | : {{roll}} -
+      | Success with a consequence
     != "{{/rollBetween() roll 3 4}}"
     != "{{#rollBetween() roll 5 6}}"
-    p Success (Yes)
+    p
+      strong Roll
+      | : {{roll}} -
+      | Success
     != "{{/rollBetween() roll 5 6}}"
     != "{{#allprops() name roll}}"
     p
