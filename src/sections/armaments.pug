@@ -4,7 +4,9 @@
     h3.title= `${label}:`
     .columns
       .column
-        +textfield(`attr_${attr}_name`, "Name")(list="armament_names")
+        .is-pulled-right
+          +damage(`attr_${attr}_damage`)
+        +textfield_v(`attr_${attr}_name`, "Name")(list="armament_names")
     .columns.is-variable.is-1
       .column.is-narrow
         +numberfield_v(`attr_${attr}_dice`, "Dice")
