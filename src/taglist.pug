@@ -2,8 +2,10 @@
 //- They will automatically show up in the list
 
 mixin taglist(attr)
-  input.taglist-trigger(type="hidden" name=attr)
-  each text, tag in equipmentTags
-    p(class=`tag-help-${tag}`)
-      strong= tag
-      span= `: ${text}`
+  .content
+    ul
+      input.taglist-trigger(type="hidden" name=attr+"_max")
+      each text, tag in equipmentTags
+        li(class=`tag-help-${tag}`)
+          strong= tag
+          span= `: ${text}`
