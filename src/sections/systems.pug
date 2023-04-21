@@ -16,5 +16,5 @@
         +textarea(`attr_${attr}_effect`, "Effect")
     .columns
       .column
-        +textfield(`attr_${attr}_tags`, "Tags")(list="tags")
-        +taglist(`attr_${attr}_tags`)
+        +textfield(`attr_${attr}_tags`, "Tags")(list="system_tags")
+        +taglist(`attr_${attr}`, [systemTags])

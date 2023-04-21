@@ -1,11 +1,12 @@
 //- Update equipmentTags in variables.json to add new tags
 //- They will automatically show up in the list
 
-mixin taglist(attr)
+mixin taglist(attr, tagsets)
   .content
     ul
-      input.taglist-trigger(type="hidden" name=attr+"_max")
-      each text, tag in equipmentTags
-        li(class=`tag-help-${tag}`)
-          strong= tag
-          span= `: ${text}`
+      input.taglist-trigger(type="hidden" name=`${attr}_tooltip`)
+      each tags in tagsets
+        each text, tag in tags
+          li(class=`tag-help-${tag}`)
+            strong= tag
+            span= `: ${text}`

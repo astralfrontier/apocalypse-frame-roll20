@@ -1,12 +1,24 @@
-on('change:arm1_tags change:arm2_tags change:arm1b_tags change:arm2b_tags change:system_signature_tags change:system_modular_1_tags change:system_modular_2_tags', (event) => {
-    let slot = (event.sourceAttribute || '')
-    getAttrs([`${slot}`], values => {
-      let tags = values[slot]
-      let slotName = slot + "_max"
-      let cleanTag = tags.replace(/[\W_]+/g," ").replace("Spin Up", "SpinUp")
-      const out: any = {}
-      out[slotName] = cleanTag
-      setAttrs(out)
-    })
-  }
-)
+const tagSystems = [
+  'arm1',
+  'arm2',
+  'arm1b',
+  'arm2b',
+  'system_signature',
+  'system_modular_1',
+  'system_modular_2',
+]
+  .map((tagSystem) => `change:${tagSystem}_range change:${tagSystem}_tags`)
+  .join(' ')
+
+on(tagSystems, (event) => {
+  let slot = (event.sourceAttribute || '').replace(/_(range|tags)$/, '')
+  getAttrs([`${slot}_range`, `${slot}_tags`], (values) => {
+    let tags = `${values[`${slot}_range`]} ${values[`${slot}_tags`]}`
+    let cleanTag = tags.replace(/[\W_]+/g, ' ').replace('Spin Up', 'SpinUp')
+    const out: any = {}
+    let tooltip = `${slot}_tooltip`
+    out[tooltip] = cleanTag
+    console.dir({ tags, cleanTag, out })
+    setAttrs(out)
+  })
+})

@@ -20,8 +20,8 @@
       .column.is-narrow
         +numberfield_v(`attr_${attr}_harm`, "Harm")
       .column
-        +textfield_v(`attr_${attr}_range`, "Range")(list="ranges")
+        +textfield_v(`attr_${attr}_range`, "Range")(list="range_tags")
     .columns
       .column
-        +textfield(`attr_${attr}_tags`, "Tags")(list="tags")
-        +taglist(`attr_${attr}_tags`)
+        +textfield(`attr_${attr}_tags`, "Tags")(list="armament_tags")
+        +taglist(`attr_${attr}`, [rangeTags, armamentTags])

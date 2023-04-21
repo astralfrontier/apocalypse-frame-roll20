@@ -44,12 +44,19 @@
       "slot_tags": "Burst"
     }
   ],
-  "equipmentTags": {
+  "rangeTags": {
+    "Close": "Armament is usable at this noted range. When more than one range Tag is specified, you may use the Armament at any of the specified ranges.",
+    "Near": "Armament is usable at this noted range. When more than one range Tag is specified, you may use the Armament at any of the specified ranges.",
+    "Far": "Armament is usable at this noted range. When more than one range Tag is specified, you may use the Armament at any of the specified ranges."
+  },
+  "systemTags": {
     "Efficient": "The first time in a round that you use this System, roll a die. On a 4-6, no Fuel is expended this time.",
     "Holdout": "If you have 0 Fuel, you may use this System by spending 1 Tension. It gains the Limited Tag when used in this way.",
     "Limited": "You may only use this System once per round.",
     "Distracting": "Enemies Harmed by this deal -1 Harm on their next attack this round. This effect does not stack if the enemy is Harmed more than once.",
+    "Energy": "Ignores Armor.",
     "Flashy": "An enemy Harmed by this System must attack you or anyone else who Harms them with a Flashy System this round, provided that such an attack is possible. This effect lasts until the end of the round.",
+    "Piercing": "Ignores Shields.",
     "Suppressive": "Standard enemies Harmed by this System can't move (including movement from Approach/Retreat Tags) for the rest of the round.",
     "Superhot": "One target affected by this System takes +1 Harm from it.",
     "Encouraging": "Anyone affected by this System does +1 Harm with their next Attack this round.",
@@ -57,13 +64,13 @@
     "Motivating": "Anyone affected by this System may move immediately to a Near location.",
     "Obfuscating": "Anyone affected by this System cannot be attacked until the start of the next round if the would-be attacker has at least one other target in range.",
     "Projecting": "If this System only affects you, you can instead have it affect a Close ally. If this System only affects a Close ally, you can instead have it affect a Near ally. You must pay 1 Tension in addition to the Fuel cost.",
-    "Protective": "Anyone affected by this system reduces Harm by 1 the next time they take Harm this round.",
-    "Close": "Armament is usable at this noted range. When more than one range Tag is specified, you may use the Armament at any of the specified ranges.",
-    "Near": "Armament is usable at this noted range. When more than one range Tag is specified, you may use the Armament at any of the specified ranges.",
-    "Far": "Armament is usable at this noted range. When more than one range Tag is specified, you may use the Armament at any of the specified ranges.",
+    "Protective": "Anyone affected by this system reduces Harm by 1 the next time they take Harm this round."
+  },
+  "armamentTags": {
     "Burst": "+1 Harm when your roll is a 6.",
     "Charge": "+1 die on your first Attack with this Armament each round.",
     "Critical": "+1 Harm when used at half Vigor or less.",
+    "Distracting": "Enemies Harmed by this deal -1 Harm on their next attack this round. This effect does not stack if the enemy is Harmed more than once.",
     "Energy": "Ignores Armor.",
     "Focused": "+1 Harm when used at maximum or greater Tension.",
     "Hot": "Once per round, gain 1 Tension when you take out an enemy.",
