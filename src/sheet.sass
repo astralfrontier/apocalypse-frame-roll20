@@ -16,6 +16,10 @@ $body-font-size: 1.2em
 
   @import "./taglist"
 
+  // There's a conflict between Bulma's "container" and Roll20's "container"
+  .container
+    background-color: white
+
   // Remove Roll20 dice
   button[type="roll"]::before
     content: inherit
