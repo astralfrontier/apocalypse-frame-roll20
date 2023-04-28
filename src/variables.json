@@ -396,9 +396,10 @@
     }
   ],
   "rangeTags": {
-    "Close": "Armament is usable at this noted range. When more than one range Tag is specified, you may use the Armament at any of the specified ranges.",
-    "Near": "Armament is usable at this noted range. When more than one range Tag is specified, you may use the Armament at any of the specified ranges.",
-    "Far": "Armament is usable at this noted range. When more than one range Tag is specified, you may use the Armament at any of the specified ranges."
+    "Close": "A few steps away, a distance you can move practically instantly (on a map, in the same hex).",
+    "Near": "A short distance away, as far as you can move in a few seconds (on a map, one hex away). When you move, you can move to a Near location.",
+    "Far": "within a reasonable range for combat, further than you can move in a few seconds (on a map, two hexes away).",
+    "Extreme": "just beyond a reasonable range for combat, except in very rare cases (on a map, three hexes away)."
   },
   "systemTags": {
     "Efficient": "The first time in a round that you use this System, roll a die. On a 4-6, no Fuel is expended this time.",
