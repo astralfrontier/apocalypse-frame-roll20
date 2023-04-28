@@ -436,5 +436,31 @@
     "SpinUp": "+1 Harm if your previous Attack was with this Armament.",
     "Splash": "Enemies who are Close to the target take 1 Harm when your roll is a 6. If the Armament has Energy and/or Piercing Tags, Splash Harm ignores Armor and/or Shields.",
     "Stationary": "+1 die if you haven't moved during this round."
-  }
+  },
+  "frameDamage": [
+    {
+      "label": "Superstructure",
+      "desc": "-2 Max Vigor. -1 die, Drive rolls"
+    },
+    {
+      "label": "Legs",
+      "desc": "Move/Sprint need Speed rolls. -1 die, all other Speed rolls."
+    },
+    {
+      "label": "Sensor",
+      "desc": "-1 die, Attack/Control rolls."
+    },
+    {
+      "label": "Arm",
+      "desc": "Lose one Armament."
+    },
+    {
+      "label": "Shoulder",
+      "desc": "One Mod. System needs a Control roll."
+    },
+    {
+      "label": "Core",
+      "desc": "Sig. System needs a Drive roll."
+    }
+  ]
 }

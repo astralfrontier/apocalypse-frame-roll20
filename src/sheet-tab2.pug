@@ -70,29 +70,10 @@
           strong 3rd time: 
           |
           | Eject or Last Stand 
-        ol 
-          li
-            strong Superstructure:
-            |
-            | -2 Max Vigor. -1 die, Drive rolls
-          li
-            strong Legs:
-            |
-            | Move/Sprint need Speed rolls. -1 die, all other Speed rolls.
-          li
-            strong Sensor:
-            |
-            | -1 die, Attack/Control rolls.
-          li
-            strong Arm:
-            |
-            | Lose one Armament.
-          li
-            strong Shoulder:
-            |
-            | One Mod. System needs a Control roll.
-          li
-            strong Core:
-            |
-            | Sig. System needs a Drive roll.
-        +rollbutton("framedamage", {"roll": `[[1d6]]`})
+        ol
+          each option in frameDamage
+            if option.desc
+              li
+                strong= `${option.label}:`
+                |
+                span= option.desc

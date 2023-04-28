@@ -1,0 +1,18 @@
++section("Frame Damage")
+  each option in frameDamage
+    .columns.is-vcentered
+      .column.is-narrow
+        input(type="checkbox" name=`damage_${option.label.toLowerCase()}_flag`)
+      .column
+        p= option.desc
+  each attr in ["other1", "other2"]
+    .columns.is-vcentered
+      .column.is-narrow
+        input(type="checkbox" name=`damage_${attr}_flag`)
+      .column
+        input.input.is-full(type="text" name=`damage_${attr}_text`)
+
+  .columns.is-vcentered
+    .column.is-narrow
+      +rollbutton("framedamage", {"roll": `[[1d6]]`})
+    .column Roll Randomly
