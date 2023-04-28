@@ -9,7 +9,13 @@
       "system_signature_tags": "Limited",
       "vigor_base": "7",
       "tension_base": "2",
-      "fuel_base": "4"
+      "fuel_base": "4",
+      "arm1_name": "Assault Rifle",
+      "arm2_name": "Machinegun",
+      "arm1b_name": "Handgun",
+      "arm2b_name": "Sword",
+      "system_modular_1_name": "Chaingun (Offensive)",
+      "system_modular_2_name": "Pulse Laser (Offensive)"
     },
     {
       "frame_model": "L1-RECON",
@@ -20,19 +26,224 @@
       "system_signature_tags": "Limited",
       "vigor_base": "6",
       "tension_base": "4",
-      "fuel_base": "3"
+      "fuel_base": "3",
+      "arm1_name": "Scout Rifle",
+      "arm2_name": "Plasma Blade",
+      "arm1b_name": "Handgun",
+      "arm2b_name": "Sword",
+      "system_modular_1_name": "Afterburner (Support)",
+      "system_modular_2_name": "Railgun (Offensive)"
+    },
+    {
+      "frame_model": "H1-VANGUARD",
+      "build": "Heavy: Before rolling Drops, regain 2 Vigor.",
+      "signature_feature": "Treat any Frame within Close range of you as having at least 1 Armor.",
+      "system_signature_name": "Assault Barrier (Support)",
+      "system_signature_effect": "You gain 3 Shields until the end of the round.",
+      "system_signature_tags": "",
+      "vigor_base": "8",
+      "tension_base": "0",
+      "fuel_base": "5",
+      "arm1_name": "Rocket Launcher",
+      "arm2_name": "Recoilless Rifle",
+      "arm1b_name": "Handgun",
+      "arm2b_name": "Revolver",
+      "system_modular_1_name": "Point Defense Cannons (Offensive)",
+      "system_modular_2_name": "Missile Battery (Offensive)"
+    },
+    {
+      "frame_model": "M2-ARCHER",
+      "build": "Medium: Before rolling Drops, regain 1 Vigor and 1 Tension",
+      "signature_feature": "When you have no enemies in Close or Near range, you can use Systems or make Far Attacks at Extreme range. Attacks have -1 die and Systems have -1 Harm when used at this range",
+      "system_signature_name": "Target Painter (Offensive)",
+      "system_signature_effect": "Mark an enemy at Near or Far; they take 1 Harm immediately. Attacks against them gain +1 die, and Systems used against them have +1 Harm for the rest of the round.",
+      "system_signature_tags": "Energy",
+      "vigor_base": "6",
+      "tension_base": "3",
+      "fuel_base": "4",
+      "arm1_name": "Marksman Rifle",
+      "arm2_name": "Sniper Rifle",
+      "arm1b_name": "Handgun",
+      "arm2b_name": "Revolver",
+      "system_modular_1_name": "Exit Thrusters (Support)",
+      "system_modular_2_name": "Sniper Cannon (Offensive)"
+    },
+    {
+      "frame_model": "L2-BRAWLER",
+      "build": "Light: Before rolling Drops, regain 2 Tension.",
+      "signature_feature": "After taking out an enemy at Close range, you may immediately move to a Near location.",
+      "system_signature_name": "Kinetic Discharge (Offensive)",
+      "system_signature_effect": "Deal Harm to every Close enemy equal to range bands moved this turn. Afterwards, take the same Harm reduced by 3.",
+      "system_signature_tags": "Limited",
+      "vigor_base": "5",
+      "tension_base": "5",
+      "fuel_base": "3",
+      "arm1_name": "Carbine",
+      "arm2_name": "Revolver Cannon",
+      "arm1b_name": "Handgun",
+      "arm2b_name": "Sword",
+      "system_modular_1_name": "Entry Thrusters (Support)",
+      "system_modular_2_name": "Reactor Backdraft (Support)"
+    },
+    {
+      "frame_model": "H2-LANCER",
+      "build": "Heavy: Before rolling Drops, regain 2 Vigor.",
+      "signature_feature": "The first time you Attack during a round, you may do so against two separate targets. Each attack must use a different Armament.",
+      "system_signature_name": "Flamethrower (Offensive)",
+      "system_signature_effect": "Deal 3 Harm to Close enemies.",
+      "system_signature_tags": "Energy Piercing Limited",
+      "vigor_base": "7",
+      "tension_base": "1",
+      "fuel_base": "5",
+      "arm1_name": "Handcannon",
+      "arm2_name": "Grenade Launcher",
+      "arm1b_name": "Handgun",
+      "arm2b_name": "Sword",
+      "system_modular_1_name": "Arc Mortar (Offensive)",
+      "system_modular_2_name": "Targeting Radar (Support)"
+    },
+    {
+      "frame_model": "M3-SENTINEL",
+      "build": "Medium: Before rolling Drops, regain 1 Vigor and 1 Tension",
+      "signature_feature": "At the end of your turn, you and all allies within Close range restore 1 Vigor.",
+      "system_signature_name": "EMP Blaster (Offensive)",
+      "system_signature_effect": "Deal 1 Harm to two Near enemies. Until next round, their Armor and Shields count as 0. If they're Standard enemies, they can't be activated during the GM turn.",
+      "system_signature_tags": "Energy Piercing",
+      "vigor_base": "6",
+      "tension_base": "2",
+      "fuel_base": "5",
+      "arm1_name": "Laser Rifle",
+      "arm2_name": "Gauss Cannon",
+      "arm1b_name": "Handgun",
+      "arm2b_name": "Revolver",
+      "system_modular_1_name": "Shield Projector (Support)",
+      "system_modular_2_name": "Plasma Cannon (Offensive)"
+    },
+    {
+      "frame_model": "L3-GLADIATOR",
+      "build": "Light: Before rolling Drops, regain 2 Tension.",
+      "signature_feature": "You have +1 Armor against enemy attacks from Near and Far range.",
+      "system_signature_name": "Repulsor Shield (Offensive)",
+      "system_signature_effect": "Move Close to an enemy at Close or Near. They take 2 Harm and you may move them to a Near location",
+      "system_signature_tags": "Suppressive",
+      "vigor_base": "5",
+      "tension_base": "4",
+      "fuel_base": "4",
+      "arm1_name": "Kinetic Cannon",
+      "arm2_name": "Gatling Cannon",
+      "arm1b_name": "Handgun",
+      "arm2b_name": "Sword",
+      "system_modular_1_name": "Elbow Spikes (Offensive)",
+      "system_modular_2_name": "Concussion Grenade (Offensive)"
+    },
+    {
+      "frame_model": "H3-ANGLER",
+      "build": "Heavy: Before rolling Drops, regain 2 Vigor.",
+      "signature_feature": "Standard enemies Harmed by any Armament or System can't move (including movement from Approach/Retreat Tags) for the rest of the round.",
+      "system_signature_name": "Net Launcher",
+      "system_signature_effect": "Pick one Near location. Deal 1 Harm to every target Close to that Location. If their Vigor is reduced by at least 1, they move Close to you afterwards.",
+      "system_signature_tags": "",
+      "vigor_base": "7",
+      "tension_base": "0",
+      "fuel_base": "6",
+      "arm1_name": "Shotgun",
+      "arm2_name": "Electrolaser",
+      "arm1b_name": "Handgun",
+      "arm2b_name": "Revolver",
+      "system_modular_1_name": "Shoulder Spear (Offensive)",
+      "system_modular_2_name": "Shield Generator (Support)"
     }
   ],
   "systems": [
+    {
+      "slot_name": "Afterburner (Support)",
+      "slot_effect": "Move immediately to a Far location.",
+      "slot_tags": ""
+    },
+    {
+      "slot_name": "Arc Mortar (Offensive)",
+      "slot_effect": "Mark a Near or Far location. At the start of the next round, deal 2 Harm to every enemy Close to that location.",
+      "slot_tags": "Piercing"
+    },
     {
       "slot_name": "Chaingun (Offensive)",
       "slot_effect": "Choose: deal 1 Harm to four Close or Near enemies who are Close or Near to each other, or deal 2 Harm to two Close or Near enemies who are Close or Near to each other.",
       "slot_tags": ""
     },
     {
+      "slot_name": "Concussion Grenade (Offensive)",
+      "slot_effect": "Choose a Near location, and deal 1 Harm to every enemy Close to that location.",
+      "slot_tags": "Suppressive"
+    },
+    {
+      "slot_name": "Elbow Spikes (Offensive)",
+      "slot_effect": "Deal 3 Harm to a Close enemy",
+      "slot_tags": "Efficient Holdout"
+    },
+    {
+      "slot_name": "Entry Thrusters (Support)",
+      "slot_effect": "Move to a Near location, then deal 2 Harm to an enemy Close to you.",
+      "slot_tags": ""
+    },
+    {
+      "slot_name": "Exit Thrusters (Support)",
+      "slot_effect": "Deal 2 Harm to an enemy Close to you, then move to a Near location.",
+      "slot_tags": ""
+    },
+    {
+      "slot_name": "Missile Battery (Offensive)",
+      "slot_effect": "Deal 2 Harm to 3 Near enemies.",
+      "slot_tags": ""
+    },
+    {
+      "slot_name": "Plasma Cannon (Offensive)",
+      "slot_effect": "Deal 3 Harm to one Near enemy.",
+      "slot_tags": "Energy"
+    },
+    {
+      "slot_name": "Point Defense Cannons (Offensive)",
+      "slot_effect": "Deal 2 Harm to each Close enemy.",
+      "slot_tags": "Piercing"
+    },
+    {
       "slot_name": "Pulse Laser (Offensive)",
       "slot_effect": "Choose: deal 2 Harm to a Near enemy, or deal 1 Harm to a Far enemy.",
       "slot_tags": "Energy Efficient"
+    },
+    {
+      "slot_name": "Railgun (Offensive)",
+      "slot_effect": "Deal 4 Harm to a Far enemy.",
+      "slot_tags": "Piercing Limited"
+    },
+    {
+      "slot_name": "Reactor Backdraft (Offensive)",
+      "slot_effect": "Deal 3 Harm to a Close enemy, and an additional +2 Harm if you're at half of your maximum Vigor or less.",
+      "slot_tags": "Energy Efficient"
+    },
+    {
+      "slot_name": "Shield Generator (Support)",
+      "slot_effect": "Gain 2 Shields",
+      "slot_tags": ""
+    },
+    {
+      "slot_name": "Shield Projetor (Support)",
+      "slot_effect": "A Close ally gains 2 Shields.",
+      "slot_tags": ""
+    },
+    {
+      "slot_name": "Shoulder Spear (Offensive)",
+      "slot_effect": "Deal 5 Harm to a Close enemy.",
+      "slot_tags": ""
+    },
+    {
+      "slot_name": "Sniper Cannon (Offensive)",
+      "slot_effect": "Deal 3 Harm to a Far enemy.",
+      "slot_tags": ""
+    },
+    {
+      "slot_name": "Targeting Radar (Support)",
+      "slot_effect": "Your Attacks this turn gain +1 die.",
+      "slot_tags": "Limited"
     }
   ],
   "armaments": [
@@ -42,6 +253,146 @@
       "slot_harm": "3",
       "slot_range": "Near",
       "slot_tags": "Burst"
+    },
+    {
+      "slot_name": "Machinegun",
+      "slot_dice": "4",
+      "slot_harm": "1",
+      "slot_range": "Close Near",
+      "slot_tags": "Splash Piercing"
+    },
+    {
+      "slot_name": "Scout Rifle",
+      "slot_dice": "3",
+      "slot_harm": "2",
+      "slot_range": "Near Far",
+      "slot_tags": ""
+    },
+    {
+      "slot_name": "Plasma Blade",
+      "slot_dice": "1",
+      "slot_harm": "5",
+      "slot_range": "Close",
+      "slot_tags": "Energy Piercing Charge"
+    },
+    {
+      "slot_name": "Rocket Launcher",
+      "slot_dice": "1",
+      "slot_harm": "4",
+      "slot_range": "Far",
+      "slot_tags": "Incendiary Stationary"
+    },
+    {
+      "slot_name": "Recoilless Rifle",
+      "slot_dice": "1",
+      "slot_harm": "4",
+      "slot_range": "Near Far",
+      "slot_tags": "Scoped"
+    },
+    {
+      "slot_name": "Marksman Rifle",
+      "slot_dice": "2",
+      "slot_harm": "2",
+      "slot_range": "Near Far",
+      "slot_tags": "Burst Stationary"
+    },
+    {
+      "slot_name": "Sniper Rifle",
+      "slot_dice": "2",
+      "slot_harm": "3",
+      "slot_range": "Far",
+      "slot_tags": "Stationary"
+    },
+    {
+      "slot_name": "Carbine",
+      "slot_dice": "3",
+      "slot_harm": "2",
+      "slot_range": "Close Near",
+      "slot_tags": "Burst Mobile"
+    },
+    {
+      "slot_name": "Revolver Cannon",
+      "slot_dice": "2",
+      "slot_harm": "4",
+      "slot_range": "Close",
+      "slot_tags": "Hot Sighted"
+    },
+    {
+      "slot_name": "Handcannon",
+      "slot_dice": "4",
+      "slot_harm": "2",
+      "slot_range": "Near",
+      "slot_tags": "Hot"
+    },
+    {
+      "slot_name": "Grenade Launcher",
+      "slot_dice": "2",
+      "slot_harm": "3",
+      "slot_range": "Close Near",
+      "slot_tags": "Incendiary Splash"
+    },
+    {
+      "slot_name": "Laser Rifle",
+      "slot_dice": "3",
+      "slot_harm": "2",
+      "slot_range": "Near",
+      "slot_tags": "Energy Polished SpinUp"
+    },
+    {
+      "slot_name": "Gauss Cannon",
+      "slot_dice": "3",
+      "slot_harm": "2",
+      "slot_range": "Far",
+      "slot_tags": "Piercing"
+    },
+    {
+      "slot_name": "Kinetic Cannon",
+      "slot_dice": "2",
+      "slot_harm": "4",
+      "slot_range": "Close",
+      "slot_tags": "Impulsive Charge"
+    },
+    {
+      "slot_name": "Gatling Cannon",
+      "slot_dice": "2",
+      "slot_harm": "3",
+      "slot_range": "Near",
+      "slot_tags": "Invigorating SpinUp Focused"
+    },
+    {
+      "slot_name": "Shotgun",
+      "slot_dice": "3",
+      "slot_harm": "2",
+      "slot_range": "Close Near",
+      "slot_tags": "Splash Piercing"
+    },
+    {
+      "slot_name": "Electrolaser",
+      "slot_dice": "3",
+      "slot_harm": "2",
+      "slot_range": "Far",
+      "slot_tags": "Energy"
+    },
+    {
+      "slot_name": "Handgun",
+      "slot_dice": "4",
+      "slot_harm": "1",
+      "slot_range": "Near",
+      "slot_tags": "Hot"
+    },
+    {
+      "slot_name": "Sword",
+      "slot_dice": "1",
+      "slot_harm": "5",
+      "slot_range": "Close",
+      "slot_tags": "Piercing"
+    },
+    {
+      "slot_name": "Revolver",
+      "slot_dice": "2",
+      "slot_harm": "2",
+      "slot_range": "Far",
+      "slot_tags": "Scoped"
     }
   ],
   "rangeTags": {
