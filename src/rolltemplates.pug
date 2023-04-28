@@ -41,3 +41,20 @@ rolltemplate.sheet-rolltemplate-framedamage
         span= frameDamage[i].desc
       != `{{/rollTotal() roll ${i+1}}}`
       - i++
+
+rolltemplate.sheet-rolltemplate-shields
+  .sheet-rolltemplate-header
+    h3 Shields
+  .sheet-rolltemplate-body
+    != "{{#rollBetween() roll 1 shields}}"
+    p
+      strong Roll
+      | : {{roll}} -
+      | Take 0 Harm, remove 1 Shields
+    != "{{/rollBetween() roll 1 shields}}"
+    != "{{#rollGreater() roll shields}}"
+    p
+      strong Roll
+      | : {{roll}} -
+      | Take Harm as normal
+    != "{{/rollGreater() roll shields}}"

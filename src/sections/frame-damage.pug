@@ -16,3 +16,10 @@
     .column.is-narrow
       +rollbutton("framedamage", {"roll": `[[1d6]]`})
     .column Roll Randomly
+
+  .columns.is-vcentered
+    .column
+      +numberfield_v(`attr_shields`, "Shields")
+        +rollbutton("shields", {"roll": `[[1d6]]`, 'shields': '[[@{shields}]]'})
+    .column
+      +numberfield_v(`attr_armor`, "Armor")
