@@ -1,5 +1,5 @@
 +section("Armaments")
-  p.sys-arm-subtitle Use the Attack Action on your turn to use these.
+  p Use the Attack Action on your turn to use these.
   each label, attr in {"arm1": "Armament 1", "arm2": "Armament 2", "arm1b": "Backup Armament 1", "arm2b": "Backup Armament 2"}
     h3.title= `${label}:`
     .columns
@@ -13,6 +13,7 @@
           +rollbutton("af", {
               "name": `${label}: @{${attr}_name}`,
               "roll": `[[@{${attr}_dice}d6kh1]]`,
+              "zroll": `[[2d6kl1]]`,
               "harm": `@{${attr}_harm}`,
               "tags": `@{${attr}_tags}`
             }
