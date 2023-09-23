@@ -3,19 +3,19 @@
     {
       attr: "drive",
       label: "Drive",
-      adjectives: "Forceful, direct, sweeping, powerful",
+      adjectives: "Forceful, direct, sweeping, powerful.",
       contributes: "Vigor"
     },
     {
       attr: "speed",
       label: "Speed",
-      adjectives: "Quick, reactive, reflexive, immediate",
+      adjectives: "Quick, reactive, reflexive, immediate.",
       contributes: "Tension"
     },
     {
       attr: "control",
       label: "Control",
-      adjectives: "Expert, skillful, technical, deliberate",
+      adjectives: "Expert, skillful, technical, deliberate.",
       contributes: "Fuel"
     }
   ]
@@ -25,7 +25,11 @@
     .columns.is-vcentered
       .column.is-narrow
         +numberfield_v(`attr_${entry.attr}`, entry.label)
-          +rollbutton("af", {"name": entry.label, "roll": `[[@{${entry.attr}}d6kh1]]`})
+          +rollbutton("af", {
+            "name": entry.label, 
+            "roll": `[[@{${entry.attr}}d6kh1]]`,
+            "zroll": `[[2d6kl1]]`
+          })
       .column
         span= entry.adjectives
         br
