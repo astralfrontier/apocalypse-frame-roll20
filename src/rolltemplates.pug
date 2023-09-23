@@ -36,7 +36,7 @@ rolltemplate.sheet-rolltemplate-framedamage
     while i < frameDamage.length
       != `{{#rollTotal() roll ${i+1}}}`
       p
-        strong= `${frameDamage[i].label} ({{roll}}):`
+        strong= `${frameDamage[i].label} ({{roll}}): `
         |
         span= frameDamage[i].desc
       != `{{/rollTotal() roll ${i+1}}}`

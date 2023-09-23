@@ -124,10 +124,10 @@ mixin damage(attr)
     .control
       span.select.is-narrow
         select(name=attr)
-          option &#x1F7E2; Online
-          option &#x1F7E1; Needs a Drive roll
-          option &#x1F7E1; Needs a Control roll
-          option &#x1F534; Offline
+          option(value='0') &#x1F7E2; Online
+          option(value='1') &#x1F7E1; Needs a Drive roll
+          option(value='2') &#x1F7E1; Needs a Control roll
+          option(value='3') &#x1F534; Offline
 
 mixin rollbutton(template, props)
   - let props_s = Object.keys(props).map(prop => `{{${prop}=${props[prop]}}}`)
