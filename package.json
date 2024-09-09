@@ -25,7 +25,7 @@
     "jstransformer-typescript": "^2.0.0",
     "pug": "^3.0.3",
     "ramda": "0.28.0",
-    "sass": "^1.77.8",
+    "sass": "^1.78.0",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
